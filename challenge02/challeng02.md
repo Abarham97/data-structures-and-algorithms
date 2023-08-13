@@ -33,5 +33,5 @@ The approach was knowing the length of the original array to get the middle inde
 
 7. creating a loop to copy after the middle index to the last index.
 
-8. returning the new array.
+8. returning the new array. 
 
