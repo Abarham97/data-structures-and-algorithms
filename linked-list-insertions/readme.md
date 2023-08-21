@@ -1,47 +1,65 @@
 # data-structures-and-algorithms
 
-# Challenge 6
-<!-- Description of the challenge -->
-## linked-list-insertions
-1.create linkedlist
-2.create three method:
-** append >> that adds a new node with the given value to the end of the list.
-**insert before>> adds a new node with the given new value immediately before the first node that has the value specified
-**insert after>>adds a new node with the given new value immediately after the first node that has the value specified
-3.wrote test cases :
-test Append Singl eNode
-test Append Multiple Nodes
-test Insert Before Middle
-test Insert Before First
-test Insert After Middle
-test Insert After Last
+# linked list insetion 
 
+## Linked List Insertions
+
+1. Initialization of Linked List
+    - Create an empty linked list.
+
+2. Methods Implementation:
+    - **Append:** Implement a method that adds a new node containing the provided value to the end of the linked list.
+    - **Insert Before:** Implement a method that adds a new node containing the provided value immediately before the first node with the specified value.
+    - **Insert After:** Implement a method that adds a new node containing the provided value immediately after the first node with the specified value.
+
+3. Test Cases:
+    - **Test Append Single Node:** Create a test to verify the functionality of appending a single node to the linked list.
+    - **Test Append Multiple Nodes:** Create a test to ensure that appending multiple nodes works correctly.
+    - **Test Insert Before Middle:** Write a test case to confirm the correct insertion of a node before a middle node in the linked list.
+    - **Test Insert Before First:** Develop a test to validate the insertion of a node before the first node in the linked list.
+    - **Test Insert After Middle:** Create a test case to verify the insertion of a node after a middle node in the linked list.
+    - **Test Insert After Last:** Write a test to ensure that a node can be inserted after the last node in the linked list.
 
 
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
 
-![whiteboard6.png](image%2Fwhiteboard6.png)
+![c6.png](c6.png)
+
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-1. The first thing specify the problem (search binary)
-2. Draw simple diagram to understand the idea of search key
-3. Try to write the code for this part
-4. Write the whole code using java language
-5. Run the code to be sure is it correct
-6. write the test cases
-6. Drawing the data structure in whiteboard
+
+1. Problem Definition (Binary Search):
+   Begin by clearly defining the problem at hand, which is binary search in this case.
+
+2. Conceptual Visualization:
+   Create a basic diagram that visually represents the concept of searching for a key using binary search. This can help in understanding the algorithm's underlying idea.
+
+3. Code Implementation - Initial Part:
+   Start by attempting to write the code for the initial steps of the binary search algorithm, such as initializing variables for low, high, and mid.
+
+4. Complete Code in Java:
+   Proceed to write the entire binary search algorithm using the Java programming language. This includes setting up the loop, calculating the midpoint, comparing values, and updating the search range.
+
+5. Code Verification:
+   Run the written code to verify its correctness. This step ensures that the algorithm produces the expected results and operates as intended.
+
+6. Creation of Test Cases:
+   Develop a set of test cases that cover various scenarios to rigorously test the binary search algorithm's functionality. This involves different cases such as finding keys within the array, keys that are not present, and edge cases.
+
+7. Visual Representation on Whiteboard:
+   Draw the relevant data structures on a whiteboard to illustrate the progress of the algorithm during different iterations. This visual aid helps in comprehending the algorithm's execution and tracking variables' values.
+
 
 ## it took three hours  and test cases then draw the whiteboard.
 
 
-## Time Complexity (O( n))
+## Time Complexity  insertBefore, insertAfter , append (O( n)) / insert O(1)
+
 ## Space Complexity (O(n))
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
+
 this the output in the terminal :
 ![runcc6.PNG](image%2Fruncc6.PNG)
 ![testcc6.PNG](image%2Ftestcc6.PNG)
