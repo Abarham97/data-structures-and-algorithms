@@ -1,8 +1,7 @@
 # linked-list-kth
 
 # the challenge asked for implementing a method for the linked list class which return a value of a node that is k places from the tail of the linked list
-
-![cc7.drawio (1).png](..%2F..%2F..%2F..%2FDownloads%2Fcc7.drawio%20%281%29.png)
+![cc7.drawio (1).png](cc7.drawio%20%281%29.png)
 
 # Approach and efficiency 
 
