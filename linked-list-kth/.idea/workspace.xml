@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34e5e712-9ce0-41f8-9efc-0def546305fa" name="Changes" comment="" />
+    <list default="true" id="34e5e712-9ce0-41f8-9efc-0def546305fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cc7.drawio (1).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codechallenge7.md" beforeDir="false" afterPath="$PROJECT_DIR$/codechallenge7.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,9 +39,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Barham/Desktop/codeChallenges/data-structures-and-algorithms/linked-list-kth"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Barham\Desktop\codeChallenges\data-structures-and-algorithms\linked-list-kth" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="linked.list.kth.Testing" />
