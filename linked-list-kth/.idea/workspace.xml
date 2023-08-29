@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34e5e712-9ce0-41f8-9efc-0def546305fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/codechallenge7.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/linked/list/kth/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/test/java/linked/list/kth/Testing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/image_26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab07read.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/linked/list/kth/Library.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/linked/list/kth/linkedListKth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/test/java/linked/list/kth/LibraryTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="34e5e712-9ce0-41f8-9efc-0def546305fa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
