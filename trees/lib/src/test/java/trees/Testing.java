@@ -100,4 +100,22 @@ public class Testing {
         assertFalse(tree.contains(2));
         assertFalse(tree.contains(8));
     }
+    @Test
+    public void testFindMaxValueEmptyTree() {
+        BinarySearchTree tree = new BinarySearchTree();
+        assertThrows(IllegalStateException.class, () -> tree.findMaxValue());
+    }
+
+    @Test
+    public void testFindMaxValue() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.add(5);
+        tree.add(3);
+        tree.add(7);
+        tree.add(2);
+        tree.add(9);
+
+        int maxValue = tree.findMaxValue();
+        assertEquals(9, maxValue);
+    }
 }
