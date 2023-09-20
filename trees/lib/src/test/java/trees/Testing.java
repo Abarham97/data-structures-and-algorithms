@@ -118,4 +118,17 @@ public class Testing {
         int maxValue = tree.findMaxValue();
         assertEquals(9, maxValue);
     }
+    @Test
+    public void testBreadthFirstTraversal() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.add(5);
+        tree.add(3);
+        tree.add(7);
+        tree.add(2);
+        tree.add(4);
+
+        List<Integer> result = tree.breadthFirst();
+        assertEquals(List.of(5, 3, 7, 2, 4), result);
+    }
 }
+
