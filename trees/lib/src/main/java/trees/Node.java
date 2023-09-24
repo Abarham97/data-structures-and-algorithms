@@ -1,6 +1,9 @@
 package trees;
 
-public class Node {
+public class
+
+
+Node {
     int value ;
     Node left;
     Node right;
