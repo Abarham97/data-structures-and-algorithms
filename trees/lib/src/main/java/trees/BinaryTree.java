@@ -49,5 +49,19 @@ public class BinaryTree {
             postOrderTraversal(node.right, result);
             result.add(node.value);
         }
+
+    }
+    public int findMaxValue() {
+        if (root == null) {
+            throw new IllegalStateException(" The tree is empty");
+        }
+        return findMaxValueRecursive(root);
+    }
+
+    private int findMaxValueRecursive(Node current) {
+        if (current.right == null) {
+            return current.value;
+        }
+        return findMaxValueRecursive(current.right);
     }
 }
