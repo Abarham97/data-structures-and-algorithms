@@ -41,3 +41,12 @@ Subarray 2: [15, 16, 42]
 Merge them into the final sorted array [4, 8, 15, 16, 23, 42]
 This visual representation demonstrates how Merge Sort recursively divides and conquers the array to sort it efficiently.
 
+
+
+## Big (O)
+**Time Complexity:**
+Merge Sort has a time complexity of O(n log n) in the worst, average, and best cases. It consistently performs well and is often used for sorting large datasets. The O(n log n) time complexity arises from the divide-and-conquer approach, where the list is repeatedly divided into two halves until each sub-list has only one element, and then the merging process is performed.
+
+**Space Complexity:**
+The space complexity of Merge Sort is O(n) in the worst case. This is because it requires additional space to store the temporary subarrays during the merging process. Each level of recursion creates temporary subarrays, and as a result, the space complexity is linearly dependent on the size of the input. While this makes Merge Sort less memory-efficient compared to some in-place sorting algorithms, it's still a very efficient sorting algorithm when it comes to time complexity.
+
