@@ -58,6 +58,7 @@ This is the final sorted array.
 
 The time complexity of the Insertion Sort algorithm is O(n^2) in the worst case, where n is the number of elements in the array. This makes it less efficient than some other sorting algorithms for larger datasets. However, it is efficient for small datasets and has the advantage of being an in-place sorting algorithm.
 
+The space complexity of the Insertion Sort algorithm is O(1), which means it uses a constant amount of extra memory space regardless of the size of the input array. This is because it primarily operates on the input array in-place and doesn't require additional data structures or memory allocation that scales with the input size.
 
 In conclusion, Insertion Sort is a straightforward sorting algorithm with a time complexity of O(n^2). It is suitable for small datasets and has the advantage of being in-place. We have visualized its step-by-step execution and provided a working Java implementation with tests to ensure its correctness.
 
