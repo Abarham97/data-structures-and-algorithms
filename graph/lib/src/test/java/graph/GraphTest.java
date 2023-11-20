@@ -65,7 +65,6 @@ class GraphTest {
         int vertex1 = graph.addVertex(1);
 
         assertThrows(SelfLoopException.class, () -> graph.addEdge(vertex1, vertex1, 5));
-
     }
 
     @Test
@@ -75,5 +74,22 @@ class GraphTest {
 
         assertThrows(SelfLoopException.class, () -> graph.addEdge(vertex1, vertex1, 5));
     }
-}
 
+    @Test
+    void testBreadthFirstTraversal() {
+        Graph graph = new Graph();
+        int vertex1 = graph.addVertex(1);
+        int vertex2 = graph.addVertex(2);
+        int vertex3 = graph.addVertex(3);
+        int vertex4 = graph.addVertex(4);
+        int vertex5 = graph.addVertex(5);
+
+        graph.addEdge(vertex1, vertex2, 10);
+        graph.addEdge(vertex1, vertex3, 15);
+        graph.addEdge(vertex2, vertex4, 20);
+        graph.addEdge(vertex3, vertex5, 25);
+
+        List<Integer> bfsResult = graph.breadthFirst(vertex1);
+        assertEquals(List.of(1, 2, 3, 4, 5), bfsResult);
+    }
+}

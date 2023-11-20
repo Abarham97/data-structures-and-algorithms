@@ -1,4 +1,5 @@
 package graph;
+
 import java.util.*;
 
 public class Graph {
@@ -33,7 +34,6 @@ public class Graph {
         List<Edge> edges1 = adjacencyList.get(vertex1);
         List<Edge> edges2 = adjacencyList.get(vertex2);
 
-        // Check if the edge already exists
         if (edges1.stream().noneMatch(edge -> edge.targetVertex == vertex2)) {
             edges1.add(new Edge(vertex2, weight));
             edges2.add(new Edge(vertex1, weight));
@@ -51,6 +51,29 @@ public class Graph {
 
     public int size() {
         return adjacencyList.size();
+    }
+
+    public List<Integer> breadthFirst(int startVertex) {
+        List<Integer> result = new ArrayList<>();
+        Queue<Integer> queue = new LinkedList<>();
+        Set<Integer> visited = new HashSet<>();
+
+        queue.add(startVertex);
+        visited.add(startVertex);
+
+        while (!queue.isEmpty()) {
+            int currentVertex = queue.poll();
+            result.add(currentVertex);
+
+            for (Edge edge : adjacencyList.get(currentVertex)) {
+                if (!visited.contains(edge.targetVertex)) {
+                    queue.add(edge.targetVertex);
+                    visited.add(edge.targetVertex);
+                }
+            }
+        }
+
+        return result;
     }
 
     private void validateVerticesExist(int vertex1, int vertex2) {
@@ -76,11 +99,18 @@ public class Graph {
 
         int vertex1 = graph.addVertex(1);
         int vertex2 = graph.addVertex(2);
+        int vertex3 = graph.addVertex(3);
+        int vertex4 = graph.addVertex(4);
 
         graph.addEdge(vertex1, vertex2, 10);
+        graph.addEdge(vertex1, vertex3, 15);
+        graph.addEdge(vertex2, vertex4, 20);
 
         System.out.println("Vertices: " + graph.getVertices());
         System.out.println("Neighbors of vertex 1: " + graph.getNeighbors(vertex1));
+
+        List<Integer> bfsResult = graph.breadthFirst(vertex1);
+        System.out.println("Breadth-First Traversal: " + bfsResult);
         System.out.println("Graph Size: " + graph.size());
     }
 }
@@ -102,4 +132,3 @@ class SelfLoopException extends RuntimeException {
         super(message);
     }
 }
-
