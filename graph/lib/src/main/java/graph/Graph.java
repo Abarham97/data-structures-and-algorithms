@@ -76,6 +76,26 @@ public class Graph {
         return result;
     }
 
+    public List<Integer> depthFirst(int startVertex) {
+        List<Integer> result = new ArrayList<>();
+        Set<Integer> visited = new HashSet<>();
+
+        depthFirstTraversal(startVertex, visited, result);
+
+        return result;
+    }
+
+    private void depthFirstTraversal(int currentVertex, Set<Integer> visited, List<Integer> result) {
+        visited.add(currentVertex);
+        result.add(currentVertex);
+
+        for (Edge edge : adjacencyList.get(currentVertex)) {
+            if (!visited.contains(edge.targetVertex)) {
+                depthFirstTraversal(edge.targetVertex, visited, result);
+            }
+        }
+    }
+
     public Integer businessTrip(List<Integer> cities) {
         if (cities == null || cities.size() < 2) {
             throw new IllegalArgumentException("At least two cities are required for a business trip.");
@@ -99,7 +119,6 @@ public class Graph {
             }
 
             if (!directFlightExists) {
-                // Direct flight not found, trip is not possible
                 return null;
             }
         }
@@ -124,6 +143,8 @@ public class Graph {
             throw new SelfLoopException("Self-loops are not allowed in the graph.");
         }
     }
+
+    // ... (existing code)
 }
 
 class DuplicateVertexException extends RuntimeException {
