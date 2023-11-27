@@ -76,6 +76,37 @@ public class Graph {
         return result;
     }
 
+    public Integer businessTrip(List<Integer> cities) {
+        if (cities == null || cities.size() < 2) {
+            throw new IllegalArgumentException("At least two cities are required for a business trip.");
+        }
+
+        int totalCost = 0;
+
+        for (int i = 0; i < cities.size() - 1; i++) {
+            int currentCity = cities.get(i);
+            int nextCity = cities.get(i + 1);
+
+            List<Edge> edges = adjacencyList.get(currentCity);
+            boolean directFlightExists = false;
+
+            for (Edge edge : edges) {
+                if (edge.targetVertex == nextCity) {
+                    directFlightExists = true;
+                    totalCost += edge.weight;
+                    break;
+                }
+            }
+
+            if (!directFlightExists) {
+                // Direct flight not found, trip is not possible
+                return null;
+            }
+        }
+
+        return totalCost;
+    }
+
     private void validateVerticesExist(int vertex1, int vertex2) {
         if (!adjacencyList.containsKey(vertex1) || !adjacencyList.containsKey(vertex2)) {
             throw new IllegalArgumentException("Both vertices should already be in the graph.");
@@ -92,26 +123,6 @@ public class Graph {
         if (vertex1 == vertex2) {
             throw new SelfLoopException("Self-loops are not allowed in the graph.");
         }
-    }
-
-    public static void main(String[] args) {
-        Graph graph = new Graph();
-
-        int vertex1 = graph.addVertex(1);
-        int vertex2 = graph.addVertex(2);
-        int vertex3 = graph.addVertex(3);
-        int vertex4 = graph.addVertex(4);
-
-        graph.addEdge(vertex1, vertex2, 10);
-        graph.addEdge(vertex1, vertex3, 15);
-        graph.addEdge(vertex2, vertex4, 20);
-
-        System.out.println("Vertices: " + graph.getVertices());
-        System.out.println("Neighbors of vertex 1: " + graph.getNeighbors(vertex1));
-
-        List<Integer> bfsResult = graph.breadthFirst(vertex1);
-        System.out.println("Breadth-First Traversal: " + bfsResult);
-        System.out.println("Graph Size: " + graph.size());
     }
 }
 
