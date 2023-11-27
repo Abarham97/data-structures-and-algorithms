@@ -1,5 +1,7 @@
 package graph;
 
+
+
 import org.junit.jupiter.api.Test;
 
 import java.util.Collection;
@@ -93,6 +95,45 @@ class GraphTest {
         assertEquals(List.of(1, 2, 3, 4, 5), bfsResult);
     }
 
+    @Test
+    void testDepthFirstTraversal() {
+        Graph graph = new Graph();
+        int vertex1 = graph.addVertex(1);
+        int vertex2 = graph.addVertex(2);
+        int vertex3 = graph.addVertex(3);
+        int vertex4 = graph.addVertex(4);
+        int vertex5 = graph.addVertex(5);
+
+        graph.addEdge(vertex1, vertex2, 10);
+        graph.addEdge(vertex1, vertex3, 15);
+        graph.addEdge(vertex2, vertex4, 20);
+        graph.addEdge(vertex3, vertex5, 25);
+
+        List<Integer> dfsResult = graph.depthFirst(vertex1);
+        assertEquals(List.of(1, 2, 4, 3, 5), dfsResult);
+    }
+
+    @Test
+    void testDepthFirstWithDisconnectedGraph() {
+        Graph graph = new Graph();
+        int vertex1 = graph.addVertex(1);
+        int vertex2 = graph.addVertex(2);
+        int vertex3 = graph.addVertex(3);
+
+        graph.addEdge(vertex1, vertex2, 10);
+
+        List<Integer> dfsResult = graph.depthFirst(vertex3);
+        assertEquals(List.of(3), dfsResult);
+    }
+
+    @Test
+    void testDepthFirstWithSingleVertex() {
+        Graph graph = new Graph();
+        int vertex1 = graph.addVertex(1);
+
+        List<Integer> dfsResult = graph.depthFirst(vertex1);
+        assertEquals(List.of(1), dfsResult);
+    }
 
     @Test
     void testBusinessTripWithSingleCity() {
