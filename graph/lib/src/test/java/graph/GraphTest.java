@@ -92,4 +92,15 @@ class GraphTest {
         List<Integer> bfsResult = graph.breadthFirst(vertex1);
         assertEquals(List.of(1, 2, 3, 4, 5), bfsResult);
     }
+
+
+    @Test
+    void testBusinessTripWithSingleCity() {
+        Graph graph = new Graph();
+        int vertex1 = graph.addVertex(1);
+
+        List<Integer> cities = List.of(vertex1);
+
+        assertThrows(IllegalArgumentException.class, () -> graph.businessTrip(cities));
+    }
 }
